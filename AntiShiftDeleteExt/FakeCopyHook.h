@@ -17,7 +17,6 @@ using namespace ATL;
 class ATL_NO_VTABLE CFakeCopyHook :
     public CComObjectRootEx<CComSingleThreadModel>,
     public CComCoClass<CFakeCopyHook, &CLSID_FakeCopyHook>,
-    public IShellExtInit,
     public ICopyHook
 {
 public:
@@ -30,7 +29,6 @@ DECLARE_REGISTRY_RESOURCEID(106)
 DECLARE_NOT_AGGREGATABLE(CFakeCopyHook)
 
 BEGIN_COM_MAP(CFakeCopyHook)
-    COM_INTERFACE_ENTRY(IShellExtInit)
     COM_INTERFACE_ENTRY(ICopyHook)
 END_COM_MAP()
 
@@ -48,12 +46,6 @@ END_COM_MAP()
     }
 
 public:
-    /* IShellExtInit */
-    STDMETHODIMP Initialize(
-        PCIDLIST_ABSOLUTE pidlFolder,
-        IDataObject* pdtobj,
-        HKEY              hkeyProgID
-    );
 
     /* ICopyHook */
     STDMETHODIMP_(UINT) CopyCallback(
