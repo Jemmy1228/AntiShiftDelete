@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AntiShiftDeleteExt", "AntiShiftDeleteExt\AntiShiftDeleteExt.vcxproj", "{44904CAD-9DFE-41A7-8FBB-15A779ACEB01}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AntiShiftDeleteExtPS", "AntiShiftDeleteExtPS\AntiShiftDeleteExtPS.vcxproj", "{B9AB9847-71A2-41D6-B8DB-C042ED477768}"
+	ProjectSection(ProjectDependencies) = postProject
+		{44904CAD-9DFE-41A7-8FBB-15A779ACEB01} = {44904CAD-9DFE-41A7-8FBB-15A779ACEB01}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44904CAD-9DFE-41A7-8FBB-15A779ACEB01}.Release|x64.ActiveCfg = Release|x64
+		{44904CAD-9DFE-41A7-8FBB-15A779ACEB01}.Release|x64.Build.0 = Release|x64
+		{44904CAD-9DFE-41A7-8FBB-15A779ACEB01}.Release|x86.ActiveCfg = Release|Win32
+		{44904CAD-9DFE-41A7-8FBB-15A779ACEB01}.Release|x86.Build.0 = Release|Win32
+		{B9AB9847-71A2-41D6-B8DB-C042ED477768}.Release|x64.ActiveCfg = Release|x64
+		{B9AB9847-71A2-41D6-B8DB-C042ED477768}.Release|x86.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AC8E854-21BD-4CF7-84C5-FDDC97547D53}
+	EndGlobalSection
+EndGlobal

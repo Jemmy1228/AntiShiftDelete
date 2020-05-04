@@ -1,0 +1,42 @@
+﻿// AntiShiftDeleteExt.idl: AntiShiftDeleteExt 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 生成类型库(AntiShiftDeleteExt.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(a817e7a2-43fa-11d0-9e44-00aa00b6770a),
+	dual,
+	pointer_default(unique)
+]
+interface IComponentRegistrar : IDispatch
+{
+	[id(1)]	HRESULT Attach([in] BSTR bstrPath);
+	[id(2)]	HRESULT RegisterAll();
+	[id(3)]	HRESULT UnregisterAll();
+	[id(4)]	HRESULT GetComponents([out] SAFEARRAY(BSTR)* pbstrCLSIDs, [out] SAFEARRAY(BSTR)* pbstrDescriptions);
+	[id(5)]	HRESULT RegisterComponent([in] BSTR bstrCLSID);
+	[id(6)] HRESULT UnregisterComponent([in] BSTR bstrCLSID);
+};
+
+[
+	uuid(8dfe808e-bdb6-4387-8880-4102ab4fb322),
+	version(1.0),
+	custom(a817e7a1-43fa-11d0-9e44-00aa00b6770a,"{e2bf26ce-52ed-4024-a7cd-d3501e5a4b7a}")
+]
+library AntiShiftDeleteExtLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(e2bf26ce-52ed-4024-a7cd-d3501e5a4b7a)
+	]
+	coclass CompReg
+	{
+		[default] interface IComponentRegistrar;
+	};
+};
+

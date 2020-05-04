@@ -1,0 +1,8 @@
+.vs/
+.vscode/
+
+Win32/
+x64/
+
+AntiShiftDeleteExt/Win32/
+AntiShiftDeleteExt/x64/
