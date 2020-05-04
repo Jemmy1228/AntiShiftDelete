@@ -1,10 +1,5 @@
-﻿// FakeCopyHook.cpp: CFakeCopyHook 的实现
-
-#include "pch.h"
+﻿#include "pch.h"
 #include "FakeCopyHook.h"
-
-
-// CFakeCopyHook
 
 STDMETHODIMP_(HRESULT __stdcall) CFakeCopyHook::Initialize(
     PCIDLIST_ABSOLUTE pidlFolder,

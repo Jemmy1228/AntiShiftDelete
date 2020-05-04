@@ -43,6 +43,9 @@
     <ClInclude Include="FakeCopyHook.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CFileOperation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AntiShiftDeleteExt.cpp">
@@ -61,6 +64,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="FakeCopyHook.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CFileOperation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

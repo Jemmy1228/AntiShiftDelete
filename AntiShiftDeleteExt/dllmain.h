@@ -1,6 +1,4 @@
-﻿// dllmain.h: 模块类的声明。
-
-class CAntiShiftDeleteExtModule : public ATL::CAtlDllModuleT< CAntiShiftDeleteExtModule >
+﻿class CAntiShiftDeleteExtModule : public ATL::CAtlDllModuleT< CAntiShiftDeleteExtModule >
 {
 public :
     DECLARE_LIBID(LIBID_AntiShiftDeleteExtLib)

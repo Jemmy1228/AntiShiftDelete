@@ -1,11 +1,4 @@
-﻿// AntiShiftDeleteExt.cpp: DLL 导出的实现。
-
-//
-// 注意:  COM+ 1.0 信息: 
-//      请记住运行 Microsoft Transaction Explorer 以安装组件。
-//      默认情况下不进行注册。
-
-#include "pch.h"
+﻿#include "pch.h"
 #include "framework.h"
 #include "resource.h"
 #include "AntiShiftDeleteExt_i.h"
@@ -15,38 +8,32 @@
 
 using namespace ATL;
 
-// 用于确定 DLL 是否可由 OLE 卸载。
 _Use_decl_annotations_
 STDAPI DllCanUnloadNow(void)
 {
     return _AtlModule.DllCanUnloadNow();
 }
 
-// 返回一个类工厂以创建所请求类型的对象。
 _Use_decl_annotations_
 STDAPI DllGetClassObject(_In_ REFCLSID rclsid, _In_ REFIID riid, _Outptr_ LPVOID* ppv)
 {
     return _AtlModule.DllGetClassObject(rclsid, riid, ppv);
 }
 
-// DllRegisterServer - 向系统注册表中添加项。
 _Use_decl_annotations_
 STDAPI DllRegisterServer(void)
 {
-    // 注册对象、类型库和类型库中的所有接口
-    HRESULT hr = _AtlModule.DllRegisterServer();
+    HRESULT hr = _AtlModule.DllRegisterServer(FALSE);
     return hr;
 }
 
-// DllUnregisterServer - 移除系统注册表中的项。
 _Use_decl_annotations_
 STDAPI DllUnregisterServer(void)
 {
-    HRESULT hr = _AtlModule.DllUnregisterServer();
+    HRESULT hr = _AtlModule.DllUnregisterServer(FALSE);
     return hr;
 }
 
-// DllInstall - 按用户和计算机在系统注册表中逐一添加/移除项。
 STDAPI DllInstall(BOOL bInstall, _In_opt_  LPCWSTR pszCmdLine)
 {
     HRESULT hr = E_FAIL;

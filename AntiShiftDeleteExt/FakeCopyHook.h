@@ -1,7 +1,5 @@
-﻿// FakeCopyHook.h: CFakeCopyHook 的声明
-
-#pragma once
-#include "resource.h"       // 主符号
+﻿#pragma once
+#include "resource.h"
 
 
 
@@ -15,9 +13,6 @@
 #endif
 
 using namespace ATL;
-
-
-// CFakeCopyHook
 
 class ATL_NO_VTABLE CFakeCopyHook :
     public CComObjectRootEx<CComSingleThreadModel>,

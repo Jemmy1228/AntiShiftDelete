@@ -1,7 +1,5 @@
-﻿// compreg.h : CCompReg 的声明
+﻿#pragma once
 
-#pragma once
-
-#include "resource.h"       // 主符号
+#include "resource.h"
 #include "AntiShiftDeleteExt_i.h"
 
