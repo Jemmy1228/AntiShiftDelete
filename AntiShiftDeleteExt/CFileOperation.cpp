@@ -10,9 +10,6 @@ fntDeleteItem* pOldDeleteItem = NULL;
 fntDeleteItems* pOldDeleteItems = NULL;
 fntSetOperationFlags* pOldSetOperationFlags = NULL;
 DWORD dwOperationFlags = 0;
-/*
-wchar_t buf[32] = { 0 };
-*/
 
 STDMETHODIMP HookFileOperation()
 {
@@ -62,6 +59,7 @@ STDMETHODIMP DeleteItem(
     BOOLEAN RECYCLEBIN = dwOperationFlags == 0x4000110; /* Empty RecycleBin */
 
     if (!ALLOWUNDO && !RECYCLEONDELETE && !RECYCLEBIN) {
+        MessageBeep(MB_ICONWARNING);
         return E_ABORT;
     }
 
@@ -78,6 +76,7 @@ STDMETHODIMP DeleteItems(
     BOOLEAN RECYCLEBIN = dwOperationFlags == 0x4000110; /* Empty RecycleBin */
 
     if (!ALLOWUNDO && !RECYCLEONDELETE && !RECYCLEBIN) {
+        MessageBeep(MB_ICONWARNING);
         return E_ABORT;
     }
 
@@ -87,10 +86,5 @@ STDMETHODIMP DeleteItems(
 STDMETHODIMP SetOperationFlags(IFileOperation* pfo, DWORD dwFlags)
 {
     dwOperationFlags = dwFlags;
-    /*
-    memset(buf, 0, 32 * sizeof(wchar_t));
-    wsprintfW(buf, L"%x", dwFlags);
-    MessageBoxW(NULL, buf, L"SetOperationFlags", MB_OK);
-    */
     return (*pOldSetOperationFlags)(pfo, dwFlags);
 }
