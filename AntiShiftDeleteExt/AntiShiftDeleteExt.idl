@@ -24,6 +24,14 @@ interface IComponentRegistrar : IDispatch
 };
 
 [
+	object,
+	uuid(b8bc5b4b-d553-49eb-89b7-5aaa40b3f1fb),
+	pointer_default(unique)
+]
+interface IFakeCopyHook : IUnknown
+{
+};
+[
 	uuid(8dfe808e-bdb6-4387-8880-4102ab4fb322),
 	version(1.0),
 	custom(a817e7a1-43fa-11d0-9e44-00aa00b6770a,"{e2bf26ce-52ed-4024-a7cd-d3501e5a4b7a}")
@@ -38,5 +46,13 @@ library AntiShiftDeleteExtLib
 	{
 		[default] interface IComponentRegistrar;
 	};
+	[
+		uuid(49811806-ef1c-4967-b9fa-ee8410b357bc)
+	]
+	coclass FakeCopyHook
+	{
+		[default] interface IFakeCopyHook;
+	};
 };
 
+import "shobjidl.idl";

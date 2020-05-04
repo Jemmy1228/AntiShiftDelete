@@ -12,6 +12,6 @@ CAntiShiftDeleteExtModule _AtlModule;
 // DLL 入口点
 extern "C" BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 {
-	hInstance;
-	return _AtlModule.DllMain(dwReason, lpReserved);
+    hInstance;
+    return _AtlModule.DllMain(dwReason, lpReserved);
 }
