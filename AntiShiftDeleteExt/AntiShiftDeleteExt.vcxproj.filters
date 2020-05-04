@@ -46,6 +46,9 @@
     <ClInclude Include="CFileOperation.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="FakeObjectWithSite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AntiShiftDeleteExt.cpp">
@@ -69,6 +72,9 @@
     <ClCompile Include="CFileOperation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="FakeObjectWithSite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AntiShiftDeleteExt.rc">
@@ -83,6 +89,9 @@
       <Filter>源文件</Filter>
     </None>
     <None Include="FakeCopyHook.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="FakeObjectWithSite.rgs">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>

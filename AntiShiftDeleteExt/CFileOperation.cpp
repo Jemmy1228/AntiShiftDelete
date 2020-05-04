@@ -14,7 +14,7 @@ DWORD dwOperationFlags = 0;
 wchar_t buf[32] = { 0 };
 */
 
-STDMETHODIMP InitializeHook()
+STDMETHODIMP HookFileOperation()
 {
     HRESULT hr = S_OK;
     IFileOperation* pfo = NULL;
@@ -33,6 +33,18 @@ STDMETHODIMP InitializeHook()
         || DetourAttach(&(PVOID&)pOldDeleteItem, DeleteItem) != NO_ERROR
         || DetourAttach(&(PVOID&)pOldDeleteItems, DeleteItems) != NO_ERROR
         || DetourAttach(&(PVOID&)pOldSetOperationFlags, SetOperationFlags) != NO_ERROR
+        || DetourTransactionCommit() != NO_ERROR)
+        return E_FAIL;
+
+    return S_OK;
+}
+
+STDMETHODIMP UnHookFileOperation()
+{
+    if (DetourTransactionBegin() != NO_ERROR
+        || DetourDetach(&(PVOID&)pOldDeleteItem, DeleteItem) != NO_ERROR
+        || DetourDetach(&(PVOID&)pOldDeleteItems, DeleteItems) != NO_ERROR
+        || DetourDetach(&(PVOID&)pOldSetOperationFlags, SetOperationFlags) != NO_ERROR
         || DetourTransactionCommit() != NO_ERROR)
         return E_FAIL;
 

@@ -25,7 +25,8 @@
 #define PerformOperations_Index (NewItem_Index + 1)
 #define GetAnyOperationAborted_Index (PerformOperations_Index + 1)
 
-STDMETHODIMP InitializeHook();
+STDMETHODIMP HookFileOperation();
+STDMETHODIMP UnHookFileOperation();
 
 /* The first parameter of interface function is "this", namely pfo */
 STDMETHODIMP DeleteItem(

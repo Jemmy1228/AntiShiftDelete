@@ -2,13 +2,14 @@ HKCR
 {
 	NoRemove CLSID
 	{
-		ForceRemove {49811806-ef1c-4967-b9fa-ee8410b357bc} = s 'AntiShiftDelete Shell Extension ICopyHook'
+		ForceRemove {33c79a3c-f0d2-4eb1-8f38-243071a1aae6} = s 'AntiShiftDelete Shell Extension IObjectWithSite'
 		{
 			InprocServer32 = s '%MODULE%'
 			{
 				val ThreadingModel = s 'Apartment'
 			}
 			TypeLib = s '{8dfe808e-bdb6-4387-8880-4102ab4fb322}'
+			Version = s '1.0'
 		}
 	}
 }

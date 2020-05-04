@@ -11,7 +11,12 @@ using namespace ATL;
 _Use_decl_annotations_
 STDAPI DllCanUnloadNow(void)
 {
+    /* 
     return _AtlModule.DllCanUnloadNow();
+    */
+
+    /* To prevent the BHO from being unloaded, must return S_FALSE */
+    return S_FALSE;
 }
 
 _Use_decl_annotations_

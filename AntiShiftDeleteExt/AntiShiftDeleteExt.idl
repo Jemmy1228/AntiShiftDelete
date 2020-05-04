@@ -32,6 +32,14 @@ interface IFakeCopyHook : IUnknown
 {
 };
 [
+	object,
+	uuid(7013f69b-a45d-4e58-a05b-e388d02b5e2b),
+	pointer_default(unique)
+]
+interface IFakeObjectWithSite : IUnknown
+{
+};
+[
 	uuid(8dfe808e-bdb6-4387-8880-4102ab4fb322),
 	version(1.0),
 	custom(a817e7a1-43fa-11d0-9e44-00aa00b6770a,"{e2bf26ce-52ed-4024-a7cd-d3501e5a4b7a}")
@@ -53,6 +61,14 @@ library AntiShiftDeleteExtLib
 	{
 		[default] interface IFakeCopyHook;
 	};
+	[
+		uuid(33c79a3c-f0d2-4eb1-8f38-243071a1aae6)
+	]
+	coclass FakeObjectWithSite
+	{
+		[default] interface IFakeObjectWithSite;
+	};
 };
 
+import "shobjidl.idl";
 import "shobjidl.idl";
