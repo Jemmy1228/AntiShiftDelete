@@ -2,7 +2,7 @@ HKCR
 {
 	NoRemove CLSID
 	{
-		ForceRemove {e330aee1-e4c8-4a8d-8436-370c14e708a1} = s 'AntiShiftDelete Shell Extension IShellIconOverlayIdentifier'
+		ForceRemove {e330aee1-e4c8-4a8d-8436-370c14e708a1} = s 'AntiShiftDelete IconOverlayHandler'
 		{
 			InprocServer32 = s '%MODULE%'
 			{

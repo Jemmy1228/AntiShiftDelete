@@ -9,3 +9,5 @@ AntiShiftDeleteExt/x64/
 AntiShiftDeleteExt/AntiShiftDeleteExt_p.c
 AntiShiftDeleteExt/AntiShiftDeleteExt_i.c
 AntiShiftDeleteExt/AntiShiftDeleteExt_i.h
+
+installer/*.exe
