@@ -83,7 +83,10 @@ STDMETHODIMP DeleteItems(
     return (*pOldDeleteItems)(pfo, punkItems);
 }
 
-STDMETHODIMP SetOperationFlags(IFileOperation* pfo, DWORD dwFlags)
+STDMETHODIMP SetOperationFlags(
+    IFileOperation* pfo,
+    DWORD dwFlags
+)
 {
     dwOperationFlags = dwFlags;
     return (*pOldSetOperationFlags)(pfo, dwFlags);

@@ -40,6 +40,14 @@ interface IFakeObjectWithSite : IUnknown
 {
 };
 [
+	object,
+	uuid(9c8576fd-c984-411d-815e-bc4d2e9a9287),
+	pointer_default(unique)
+]
+interface IFakeShellIconOverlayIdentifier : IUnknown
+{
+};
+[
 	uuid(8dfe808e-bdb6-4387-8880-4102ab4fb322),
 	version(1.0),
 	custom(a817e7a1-43fa-11d0-9e44-00aa00b6770a,"{e2bf26ce-52ed-4024-a7cd-d3501e5a4b7a}")
@@ -68,7 +76,15 @@ library AntiShiftDeleteExtLib
 	{
 		[default] interface IFakeObjectWithSite;
 	};
+	[
+		uuid(e330aee1-e4c8-4a8d-8436-370c14e708a1)
+	]
+	coclass FakeShellIconOverlayIdentifier
+	{
+		[default] interface IFakeShellIconOverlayIdentifier;
+	};
 };
 
+import "shobjidl.idl";
 import "shobjidl.idl";
 import "shobjidl.idl";

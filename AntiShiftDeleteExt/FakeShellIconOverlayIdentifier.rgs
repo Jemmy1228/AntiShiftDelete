@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {e330aee1-e4c8-4a8d-8436-370c14e708a1} = s 'AntiShiftDelete Shell Extension IShellIconOverlayIdentifier'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{8dfe808e-bdb6-4387-8880-4102ab4fb322}'
+			Version = s '1.0'
+		}
+	}
+}

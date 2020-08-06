@@ -49,6 +49,9 @@
     <ClInclude Include="FakeObjectWithSite.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="FakeShellIconOverlayIdentifier.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AntiShiftDeleteExt.cpp">
@@ -75,6 +78,9 @@
     <ClCompile Include="FakeObjectWithSite.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="FakeShellIconOverlayIdentifier.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AntiShiftDeleteExt.rc">
@@ -92,6 +98,9 @@
       <Filter>资源文件</Filter>
     </None>
     <None Include="FakeObjectWithSite.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="FakeShellIconOverlayIdentifier.rgs">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
