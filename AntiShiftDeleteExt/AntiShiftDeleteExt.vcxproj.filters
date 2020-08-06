@@ -40,13 +40,7 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="FakeCopyHook.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="CFileOperation.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FakeObjectWithSite.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="FakeShellIconOverlayIdentifier.h">
@@ -69,13 +63,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="FakeCopyHook.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="CFileOperation.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="FakeObjectWithSite.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="FakeShellIconOverlayIdentifier.cpp">
@@ -93,12 +81,6 @@
     </None>
     <None Include="AntiShiftDeleteExt.def">
       <Filter>源文件</Filter>
-    </None>
-    <None Include="FakeCopyHook.rgs">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="FakeObjectWithSite.rgs">
-      <Filter>资源文件</Filter>
     </None>
     <None Include="FakeShellIconOverlayIdentifier.rgs">
       <Filter>资源文件</Filter>

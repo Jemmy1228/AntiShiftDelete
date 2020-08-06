@@ -25,22 +25,6 @@ interface IComponentRegistrar : IDispatch
 
 [
 	object,
-	uuid(b8bc5b4b-d553-49eb-89b7-5aaa40b3f1fb),
-	pointer_default(unique)
-]
-interface IFakeCopyHook : IUnknown
-{
-};
-[
-	object,
-	uuid(7013f69b-a45d-4e58-a05b-e388d02b5e2b),
-	pointer_default(unique)
-]
-interface IFakeObjectWithSite : IUnknown
-{
-};
-[
-	object,
 	uuid(9c8576fd-c984-411d-815e-bc4d2e9a9287),
 	pointer_default(unique)
 ]
@@ -63,20 +47,6 @@ library AntiShiftDeleteExtLib
 		[default] interface IComponentRegistrar;
 	};
 	[
-		uuid(49811806-ef1c-4967-b9fa-ee8410b357bc)
-	]
-	coclass FakeCopyHook
-	{
-		[default] interface IFakeCopyHook;
-	};
-	[
-		uuid(33c79a3c-f0d2-4eb1-8f38-243071a1aae6)
-	]
-	coclass FakeObjectWithSite
-	{
-		[default] interface IFakeObjectWithSite;
-	};
-	[
 		uuid(e330aee1-e4c8-4a8d-8436-370c14e708a1)
 	]
 	coclass FakeShellIconOverlayIdentifier
@@ -85,6 +55,4 @@ library AntiShiftDeleteExtLib
 	};
 };
 
-import "shobjidl.idl";
-import "shobjidl.idl";
 import "shobjidl.idl";

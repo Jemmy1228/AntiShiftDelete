@@ -4,8 +4,6 @@
 //
 #define IDS_PROJNAME                    100
 #define IDR_ANTISHIFTDELETEEXT          101
-#define IDR_FAKECOPYHOOK                106
-#define IDR_FAKEOBJECTWITHSITE          107
 #define IDR_FAKESHELLICONOVERLAYIDENTIFIER 108
 
 // Next default values for new objects
